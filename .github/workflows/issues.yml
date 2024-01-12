@@ -1,8 +1,8 @@
 name: Practice project
 on: issues
 jobs:
-    lint:
+    issues:
         runs-on: ubuntu-latest
         steps:
             - name: Output contex details!
-              run: echo "${{ toJson(github)}}"
+              run: echo "${{ toJson(github.event.issue.body)}}"
